@@ -153,6 +153,7 @@ onMounted(() => {
   <LibrairieRecherche @rechercherL="chercherLivre"></LibrairieRecherche>
   <h1>Voici les livres correspondant à votre recherche :</h1>
   <div style="clear: both;">
+    <div class="listedeR">
   <LibrairieListe
       v-for="livre of listeRecherche"
       :key="livre.id"
@@ -161,10 +162,14 @@ onMounted(() => {
       @quantiteM="handlerQuantiteMoins"
       @quantiteP="handlerQuantitePlus"
   />
+      </div>
   </div>
   <hr>
-  <h2><img src="../assets/iconebiblio.png" align="absmiddle" alt= "Loupe Icone">Liste des livres</h2>
-  <ul>
+  <h2><img src="../assets/iconebiblio.png" align="absmiddle" alt= "Loupe Icone"> Liste des livres</h2>
+  <div style="clear: both;">
+  <h1>Voici les livres disponibles dans nos stocks en ce moment :</h1>
+  </div>
+    <div class="liste">
     <LibrairieListe
         v-for="livre of listeL"
         :key="livre.id"
@@ -172,13 +177,31 @@ onMounted(() => {
         @suppL="handlerDelete"
         @quantiteM="handlerQuantiteMoins"
         @quantiteP="handlerQuantitePlus"
-
     />
-  </ul>
+    </div>
+
+      <br>
+  <hr>
   <LibrairieForm @ajouterL="handlerAjoutLivre"></LibrairieForm>
 </template>
 
+
 <style scoped>
+
+.liste {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.listedeR {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+
 hr{
   height: 2px;
   background-color: hotpink;
@@ -198,15 +221,22 @@ h1{
 
 h2{
   background-color: hotpink;
-  width: 400px;
+  width: 330px;
   margin : 30px;
   padding : 10px;
-  border-radius: 30px;
+  margin-bottom: 15px;
+  border-radius: 25px;
   color: white;
   font-family: 'Courier New', Courier, monospace;
   font-weight:initial;
   font-size: 150% ;
   display: inline-block;
 }
+
+img {
+  width : 45px;
+  height :45px;
+}
+
 
 </style>

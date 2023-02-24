@@ -10,8 +10,8 @@ import Librairie from "./components/Librairie.vue";
 
 <style>
 body {
-  /* background-image: url("./assets/fond étagère.jpg");
+  background-image: url("./assets/fondrose.jpg");
   background-size: cover;
-  backdrop-filter: blur(1px); */
+
 }
 </style>
