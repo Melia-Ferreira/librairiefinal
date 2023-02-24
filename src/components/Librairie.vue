@@ -150,9 +150,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <h3>Liste des livres</h3>
-  <LibrairieForm @ajouterL="handlerAjoutLivre"></LibrairieForm>
   <LibrairieRecherche @rechercherL="chercherLivre"></LibrairieRecherche>
+  <h1>Voici les livres correspondant à votre recherche :</h1>
+  <div style="clear: both;">
   <LibrairieListe
       v-for="livre of listeRecherche"
       :key="livre.id"
@@ -161,7 +161,9 @@ onMounted(() => {
       @quantiteM="handlerQuantiteMoins"
       @quantiteP="handlerQuantitePlus"
   />
-
+  </div>
+  <hr>
+  <h2><img src="../assets/iconebiblio.png" align="absmiddle" alt= "Loupe Icone">Liste des livres</h2>
   <ul>
     <LibrairieListe
         v-for="livre of listeL"
@@ -173,7 +175,38 @@ onMounted(() => {
 
     />
   </ul>
+  <LibrairieForm @ajouterL="handlerAjoutLivre"></LibrairieForm>
 </template>
 
 <style scoped>
+hr{
+  height: 2px;
+  background-color: hotpink;
+  border: none;
+  width : 1000px;
+  margin-top: 20px;
+}
+h1{
+  margin : 1px;
+  padding : 10px;
+  color: hotpink;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight:normal;
+  font-size: 100% ;
+  display: inline-block;
+}
+
+h2{
+  background-color: hotpink;
+  width: 400px;
+  margin : 30px;
+  padding : 10px;
+  border-radius: 30px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight:initial;
+  font-size: 150% ;
+  display: inline-block;
+}
+
 </style>

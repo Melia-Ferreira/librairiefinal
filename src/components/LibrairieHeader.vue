@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h1><img src="../assets/iconelivre.jpg" align="absmiddle" alt= "Livre Icone">BIENVENUE DANS VOTRE LIBRAIRIE<img src="../assets/iconelivre.jpg" align="absmiddle" alt= "Livre Icone"></h1>
+  <h1><img src="../assets/iconelivre.jpg" align="absmiddle" alt= "Livre Icone"> BIENVENUE DANS VOTRE LIBRAIRIE <img src="../assets/iconelivre.jpg" align="absmiddle" alt= "Livre Icone"></h1>
   <h2>Achetez vos livres neufs en ligne aux meilleurs prix garantis parmi des millions de titres</h2>
   </div>
   <hr>

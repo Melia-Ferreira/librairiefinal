@@ -36,6 +36,6 @@ export default class Livre {
         this._qtestock -= 1;
     }
     afficher() {
-        return `--> ${this._titre} ${this._prix} ${this._qtestock}`;
+        return `--> ${this._titre} ${this._prix + "€"} ${"Stock : " +this._qtestock}`;
     }
 }
