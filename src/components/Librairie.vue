@@ -179,7 +179,6 @@ onMounted(() => {
         @quantiteP="handlerQuantitePlus"
     />
     </div>
-
       <br>
   <hr>
   <LibrairieForm @ajouterL="handlerAjoutLivre"></LibrairieForm>
@@ -200,7 +199,6 @@ onMounted(() => {
   flex-wrap: wrap;
   text-align: center;
 }
-
 
 hr{
   height: 2px;
